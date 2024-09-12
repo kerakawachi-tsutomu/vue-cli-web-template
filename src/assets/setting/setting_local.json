@@ -1,0 +1,5 @@
+{
+    "API_SERVER_URL": "http://localhost:8000",
+    "LOCAL_MODE": "true",
+    "DUMMY_USER_ID": "Developer"
+}

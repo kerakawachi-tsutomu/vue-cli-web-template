@@ -1,0 +1,188 @@
+/*コンテンツ描画領域*/
+.main-area {
+    width: calc(100vw - 4rem);
+    height: calc(100vh - 7rem);
+    display: flex;
+}
+
+/*コンテンツ描画領域マージン調整*/
+.main-area-margin {
+    margin-top: 3.5rem;
+}
+
+/*進捗バー横幅設定*/
+.step-progress-area {
+    width: 100%;
+}
+
+/*進捗バー*/
+.step-progress {
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #0d6efd;
+    transition: 0.5s;
+}
+
+/*国内アップロードinput要素*/
+#jpupfile {
+    display: none;
+}
+
+/*海外アップロードinput要素*/
+#wwupfile {
+    display: none;
+}
+
+/*OCR結果表示と手入力フォームの描画領域*/
+.input-table {
+    min-width: 60rem;
+    min-width: 55rem;
+    height: calc(100vh - 7.5rem);
+    overflow-y: scroll;
+}
+
+/*OCR結果表示と手入力フォームのテーブル*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+/*OCR結果表示と手入力フォームのテーブル　行*/
+table tr {
+    text-align: center;
+    border-top: solid 1px #ddd;
+    border-bottom: solid 1px #ddd;
+}
+
+/*OCR結果表示と手入力フォームのテーブル　ヘッダー*/
+table th {
+    background-color: #eee;
+    text-align: center;
+    padding: 10px 0;
+    border-right: solid 1px #ddd;
+    border-left: solid 1px #ddd;
+}
+
+/*OCR結果表示と手入力フォームのテーブル　1行目のヘッダー*/
+table tr:nth-child(1) {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/*OCR結果表示と手入力フォームのテーブル　No列*/
+table tr:nth-child(1) th:nth-child(1) {
+    width: 5rem;
+}
+
+/*OCR結果表示と手入力フォームのテーブル　画像・記載内容列*/
+table tr:nth-child(1) th:nth-child(2) {
+    width: 6rem;
+}
+
+/*OCR結果表示と手入力フォームのテーブル　発送書類番号列*/
+table tr:nth-child(1) th:nth-child(3) {
+    width: 20rem;
+}
+
+/*OCR結果表示と手入力フォームのテーブル　送達日列*/
+table tr:nth-child(1)  th:nth-child(4) {
+    width: 28rem;
+}
+
+/*OCR結果表示と手入力フォームのテーブル　セル設定*/
+table td {
+    text-align: center;
+    padding: 0.3rem;
+    border-right: solid 1px #ddd;
+    border-left: solid 1px #ddd;
+}
+
+/*発送書類番号入力フォーム*/
+.hassoo-write-form {
+    width: 15rem;
+    font-size: xx-large;
+    border: 1px solid #ced4da;
+    border-radius: 1rem;
+}
+
+/*送達日入力フォーム*/
+.hizuke-write-form {
+    width: 23rem;
+    font-size: xx-large;
+    border: 1px solid #ced4da;
+    border-radius: 1rem;
+}
+
+/*発送書類番号画像調整*/
+.jp-hassoo-img {
+    margin-right: 3rem;
+}
+
+/*送達日画像調整*/
+.jp-hizuke-img {
+    margin-right: 1rem;
+}
+
+/*コピーボタン*/
+.copy-icon-font {
+    font-size: 1.5rem;
+}
+
+/*ロードアイコンエリア*/
+.loading-img-area-width {
+    width: 11rem;
+}
+
+/*書類全体表示描画領域*/
+.preview {
+    width: calc(100vw - 64rem);
+    height: calc(100vh - 7.5rem);
+    overflow: scroll;
+}
+
+/*書類全体表示ヘッダー表示*/
+.preview-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #f1aeb5; /*$red-200*/
+    height: 2rem;
+    display: flex;
+}
+
+/*書類全体表示ヘッダー表示のテキスト*/
+.preview-header-text {
+    padding-top: 4px;
+    padding-left: 8px;
+    white-space: nowrap;
+}
+
+/*書類全体表示ヘッダー表示の飾り*/
+.preview-header-deco1 {
+    background-color: #ffe69c; /*$yellow-200*/
+    width: 10px;
+}
+
+/*書類全体表示ヘッダー表示の飾り*/
+.preview-header-deco2 {
+    background-color: #ffe69c; /*$yellow-200*/
+    width: 5px;
+}
+
+/* ラベル非表示 */
+.toolbar-label {
+    display: none;
+}
+
+@media screen and (min-width: 1177px) {
+	/* 指定の横幅以上でレイアウトをフルバージョンで表示*/
+    /* ラベル表示 */
+    .toolbar-label {
+        display: inline-block;
+    }
+}

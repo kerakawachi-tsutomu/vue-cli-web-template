@@ -1,0 +1,76 @@
+/* ダイアログ半透明黒背景表示設定 */
+.overlay {
+    /*　要素を重ねた時の順番　*/
+    z-index: 99;
+
+    /*　画面全体を覆う設定　*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+
+    /*　画面の中央に要素を表示させる設定　*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* アラート・確認ダイアログ アイコンサークル */
+.icon-circle-flat {
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    line-height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: xx-large;
+}
+
+/* 確認アイコン用色 */
+.icon-color-confirm {
+    border: 3px solid #0d6efd;
+}
+
+/* 警告アイコン用色 */
+.icon-color-alert {
+    border: 3px solid #ffc107;
+}
+
+/* アラート・確認ダイアログ サイズ */
+.disp-alert-dialog {
+    width: 360px;
+    height: 200px;
+}
+
+/* アラート・確認ダイアログ サイズ */
+.disp-alert-dialog-with-data {
+    width: 360px;
+    height: 360px;
+}
+
+/* アラート・確認メッセージエリア サイズ */
+.disp-alert-message {
+    height: calc(100% - (50px + 15px));
+}
+
+/* アラート・確認メッセージエリア サイズ */
+.disp-alert-message-with-data {
+    height: calc(100% - (50px + 120px + 15px));
+}
+
+/* アラート・確認メッセージエリア 情報表示サイズ */
+.disp-alert-data {
+    height: 120px;
+}
+
+/* アラート・確認メッセージエリア ボタンサイズ */
+.fix-btn-size {
+    width: 110px;
+}
+
+/* アラート・確認メッセージエリア 情報表示エリア伸縮禁止 */
+.not-resize {
+    resize: none;
+}
