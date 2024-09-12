@@ -1,0 +1,221 @@
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    font-family: "Meiryo" !important;
+}
+
+/* ダイアログ半透明黒背景表示設定 */
+#overlay{
+    /*　要素を重ねた時の順番　*/
+    z-index: 1;
+
+    /*　画面全体を覆う設定　*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+
+    /*　画面の中央に要素を表示させる設定　*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ヘッダー文字装飾 */
+.header-word {
+    font-family: Yu Gothic;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: larger;
+    text-shadow: 0px 0px 6px #8c68cd; /* $purple-400 */
+}
+
+/* ようこそメッセージ */
+#welcome-msg {
+    font-family: Yu Gothic !important;
+    font-weight: bold;
+    z-index: 1021; /* sticky-topのz-indexが1020のため */
+}
+
+/* サイドバーの設定 */
+.sidebar {
+    width: 67px;
+}
+
+/* サイドバーのリンク設定 */
+.sidebar-link {
+    color: #fafad2;
+    font-size: 2.2rem;
+    display: inline-block;
+}
+
+.sidebar-link:hover {
+    color: #ffa500;
+}
+
+/* 現在のページをサイドバーに示す */
+.sidebar-selected {
+    background-color: #e2d9f3; /* $purple-100 */
+    color: #146c43; /* $green-600 */
+}
+
+/* メインコンテンツ */
+.page-content {
+    overflow-x: none;
+    overflow-y: none;
+    height: calc(100% - 112px);
+    width: calc(100% - 56px);
+}
+
+/* フッター */
+.page-footer {
+    height: 50px;
+    width: calc(100% - 67px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-large {
+    width: 22rem;
+}
+
+/* 背景色 */
+.bg-purple-800 {
+    background-color: #2c1a4d;
+}
+
+/* 背景色 */
+.bg-blue-800 {
+    background-color: #052c65;
+}
+
+/* 青色アイコン */
+.blue-icon {
+    font-size: 1.5rem;
+    color: #3b82c5;
+    transition: .4s;
+    cursor: pointer;
+}
+
+/* 青色アイコン マウスオーバー */
+.blue-icon:hover {
+    color: #146c43;
+}
+
+.blue-icon-2 {
+    font-size: 2.5rem;
+    color: #3b82c5;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.blue-icon-2:hover {
+    color: #146c43;
+}
+
+/* 黄色アイコン */
+.yellow-icon {
+    font-size: 1.5rem;
+    color: #ffc107;
+    transition: .4s;
+    cursor: pointer;
+}
+
+/* 黄色アイコン マウスオーバー */
+.yellow-icon:hover {
+    color: #dc3545;
+}
+
+/* 赤色アイコン */
+.red-icon {
+    font-size: 1.5rem;
+    color: #dc3545;
+    transition: .4s;
+    cursor: pointer;
+}
+
+/* 赤色アイコン マウスオーバー */
+.red-icon:hover {
+    color: #842029;
+}
+
+/* 分割見出しの文字装飾 */
+.div-header {
+    font-family: Yu Gothic;
+    font-weight: bold;
+    letter-spacing: -1px;
+    font-size: 1.2em;
+}
+
+/* Zインデックス */
+.z-index-0 {
+    z-index: 0;
+}
+
+/* ようこそメッセージ */
+#welcome-msg {
+    font-family: Yu Gothic;
+    font-weight: bold;
+    z-index: 1021; /* sticky-topのz-indexが1020のため */
+}
+
+/* 管理者画面アイコン */
+#list-manage-icon {
+    display: none;
+}
+
+/* スクロールバー設定 */
+::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-left: solid 1px #ececec;
+}
+::-webkit-scrollbar-thumb {
+  background: #808080;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+/* サブスクロールバー設定 */
+.sub-scrollbar *::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+}
+.sub-scrollbar *::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-left: solid 1px #ececec;
+}
+.sub-scrollbar *::-webkit-scrollbar-thumb {
+  background: #B3E6FF;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+/* ダイアログ 閉じるボタン */
+.btn-circle-flat {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1px 0 0 1px;
+    color: #ffffff;
+    width: 25px;
+    height: 25px;
+    line-height: 15px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    transition: .4s;
+    border-color: #858585;
+    font-size: 20px;
+}
+
+/* ダイアログ 閉じるボタン マウスオーバー */
+.btn-circle-flat:hover {
+    background: #ffffff;
+    color: #2c1a4d; /* $purple-800 */
+}
